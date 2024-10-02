@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+Disallow: /*.git$
+Disallow: /*.sql$
+Disallow: /*.tgz$
+Disallow: /*.gz$
+Disallow: /*.tar$
+Disallow: /*.svn$
+Disallow: /*.bz2$
+Disallow: /*.log$
+
+Sitemap: https://lisbethrangel.github.io/lisbethrangel/sitemap.xml
+Sitemap: https://lisbethrangel.com/sitemap.xml
