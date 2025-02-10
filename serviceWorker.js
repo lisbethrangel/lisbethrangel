@@ -2,11 +2,12 @@ const staticAnimeshData = "site-cache-v1";
 const assets = [
   //   "/",
   "/index.html",
-  "/images/favicon.png",
+  "/images/favicon.ico",
   "/images/logoweb-1-70x70.png",
   "/images/logoweb-2-84x84.png",
   "/css/libs.min.css",
   "/css/main.css",
+  "/js/libs.js",
   "/js/libs.min.js",
   "/js/main.js",
   "/fonts/fontawesome-webfont.eot",
