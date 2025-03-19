@@ -32,3 +32,71 @@ Este espacio es iniciático en mi vida y a través de ella deseo llegar a sus co
 ### **Terapeuta Holistca**
 Cuando accedemos a nuestros cuerpos sutiles nos encontramos con una impresión de memorias e información que pueden ir desarmonizándonos, por ser de baja vibración y las mismas pueden ir ocasionando expresiones en el cuerpo físico en forma de enfermedad.
 
+```mermaid
+graph TB
+    User((User))
+
+    subgraph "Frontend Container"
+        WebUI["Static Website<br>HTML/CSS/JS"]
+        
+        subgraph "Core Components"
+            Router["Router<br>JavaScript"]
+            NavHandler["Navigation Handler<br>JavaScript"]
+            FormValidator["Form Validator<br>jQuery Validate"]
+            SlideShow["Slideshow<br>Swiper.js"]
+            PopupManager["Popup Manager<br>FancyBox"]
+            ImageHandler["Image Handler<br>JavaScript"]
+        end
+
+        subgraph "UI Components"
+            Header["Header<br>HTML/CSS"]
+            MainSection["Main Content<br>HTML/CSS"]
+            PhotoGallery["Photo Gallery<br>HTML/CSS"]
+            ServiceSection["Services Section<br>HTML/CSS"]
+            CircleSection["Circle Section<br>HTML/CSS"]
+            CeremonySection["Ceremony Section<br>HTML/CSS"]
+        end
+    end
+
+    subgraph "Asset Container"
+        StaticAssets["Static Assets<br>File System"]
+        
+        subgraph "Asset Components"
+            Images["Images<br>JPG/PNG/SVG"]
+            Styles["Stylesheets<br>CSS"]
+            Scripts["JavaScript Files<br>JS"]
+            Fonts["Font Files<br>OTF/TTF/WOFF"]
+        end
+    end
+
+    subgraph "Service Worker Container"
+        PWA["Progressive Web App<br>Service Worker"]
+        
+        subgraph "PWA Components"
+            CacheManager["Cache Manager<br>JavaScript"]
+            OfflineHandler["Offline Handler<br>JavaScript"]
+            AssetCacher["Asset Cacher<br>JavaScript"]
+        end
+    end
+
+    User -->|Accesses| WebUI
+    WebUI -->|Loads| StaticAssets
+    WebUI -->|Uses| PWA
+
+    Router -->|Controls| Header
+    Router -->|Updates| MainSection
+    NavHandler -->|Manages| Header
+    FormValidator -->|Validates| ServiceSection
+    SlideShow -->|Controls| PhotoGallery
+    PopupManager -->|Manages| CeremonySection
+    ImageHandler -->|Optimizes| PhotoGallery
+
+    StaticAssets -->|Provides| Images
+    StaticAssets -->|Provides| Styles
+    StaticAssets -->|Provides| Scripts
+    StaticAssets -->|Provides| Fonts
+
+    PWA -->|Manages| CacheManager
+    CacheManager -->|Controls| AssetCacher
+    OfflineHandler -->|Uses| CacheManager
+```
